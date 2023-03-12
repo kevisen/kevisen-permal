@@ -766,10 +766,9 @@ ul.info-list li .d_title {
 }
 .large-up {
 	display: none;
-	@media (min-width: 13660px) { 
-		display: block;
-		}
+		
 }
+
 .kevisen_tm_main_title .title h3 .bg{
 	position:absolute;
 	left: 0px;
@@ -782,6 +781,24 @@ ul.info-list li .d_title {
 	line-height: 0;
 	-webkit-text-stroke: 1px #000;
 	-webkit-user-select: none;
+}
+
+.background {
+	background-image: url(https://source.unsplash.com/1600x900/?day);
+  }
+  
+  .foreground {
+	background-image: url(https://source.unsplash.com/1600x900/?night);
+	mask-image: linear-gradient(var(--direction), rgba(0,0,0,1) 40%, rgba(0,0,0,0) 60%);
+	mask-position: 50% 50%;
+  }
+  .kevisen_tm_topbar.opened {
+    backdrop-filter: blur(5px);
+}
+.content_inner {
+    backdrop-filter: blur(13px);
+    padding: 1em;
+    background: #ffffff30;
 }
 .kevisen_tm_portoflio .portfolio_filter{
 	width: auto;
