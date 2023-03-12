@@ -584,8 +584,8 @@ ul.info-list li .d_title {
 	height: auto;
 	clear: both;
 	float: left;
-	margin-bottom: 193px;
-	padding-top: 280px;
+	margin-bottom: 10em;
+	padding-top: 10em;
 }
 .kevisen_tm_about .about_inner{
 	width: 100%;
@@ -738,8 +738,8 @@ ul.info-list li .d_title {
 	height: auto;
 	clear: both;
 	float: left;
-	margin-bottom: 200px;
-	padding: 255px 0px 200px 0px;
+	margin-bottom: 10em;
+	padding: 10em 0px 10em 0px;
 	background-color: #f8f9fa;
 }
 .kevisen_tm_portoflio .portfolio_inner{
@@ -1453,8 +1453,8 @@ body.dark .kevisen_tm_partners ul.dark{display: none;}
 	clear: both;
 	float: left;
 	position: relative;
-	margin-bottom: 200px;
-	padding-top: 255px;
+	margin-bottom: 10em;
+	padding-top: 10em;
 }
 .kevisen_tm_contact .contact_inner{
 	width: 100%;
