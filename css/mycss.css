@@ -764,6 +764,12 @@ ul.info-list li .d_title {
     font-size: 35px;
 	position: relative;
 }
+.large-up {
+	display: none;
+	@media (min-width: 13660px) { 
+		display: block;
+		}
+}
 .kevisen_tm_main_title .title h3 .bg{
 	position:absolute;
 	left: 0px;
