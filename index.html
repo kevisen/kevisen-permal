@@ -162,8 +162,7 @@
 				</div>
 				<div class="right">
 					<div class="name">
-						<h3>Kevisen Permal<span class="bg">About</span></h3>
-						<span>Web Developer</span>
+						<h3>About me<span class="bg">About</span></h3>
 					</div>
 					<div class="text">
 						<p>My name is Kevisen Permal. I am a Web Developer, and I'm very passionate and dedicated to my work.</p>
@@ -356,40 +355,37 @@
 					<div class="left wow fadeInLeft" data-wow-duration="0.8s">
 						<div class="fields">
 							<form action="/" method="post" class="contact_form" id="contact_form">
-								<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+								<div class="returnmessage"></div>
 								<div class="empty_notice"><span>Please Fill Required Fields</span></div>
 								<div class="first">
-									<ul>
-										<li>
-											<input id="name" type="text" placeholder="Name">
-										</li>
-										<li>
-											<input id="email" type="text" placeholder="Email">
-										</li>
-									</ul>
+								  <ul>
+									<li>
+									  <input id="name" name="name" type="text" placeholder="Name" required>
+									</li>
+									<li>
+									  <input id="email" name="email" type="email" placeholder="Email" required>
+									</li>
+								  </ul>
 								</div>
 								<div class="last">
-									<textarea id="message" placeholder="Message"></textarea>
+								  <textarea id="message" name="message" placeholder="Message" required></textarea>
 								</div>
 								<div class="kevisen_tm_button" data-position="left">
-									<a id="send_message" href="#">
-										<span>Send Message</span>
-									</a>
+								  <button type="submit" id="send_message" class="submit_btn"><span>Send Message</span></button>
 								</div>
-														
-							</form>
+							  </form>
 						</div>
 					</div>
-					<div class="right wow fadeInRight large-up" data-wow-duration="0.8s">
+					<!-- <div class="right wow fadeInRight large-up" data-wow-duration="0.8s">
 						<img src="img/contact/Get in touch-cuate.png">
-					</div>	
+					</div>	 -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- /CONTACT -->
 	
-	<!-- COPYRIGHT -->
+	<!-- footer -->
 	<div class="kevisen_tm_copyright">
 		<div class="container">
 			<div class="copyright_inner">
@@ -410,7 +406,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- /COPYRIGHT -->
 	
 	<!-- CURSOR -->
 	<div class="mouse-cursor cursor-outer"></div>
@@ -422,12 +417,7 @@
 	
 <!-- SCRIPTS -->
 <script src="js/jquery.js"></script>
-<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
 <script src="js/plugins.js"></script>
-	
- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap">
-        </script>
 <script src="js/customcode.js"></script>
 <!-- /SCRIPTS -->
 
