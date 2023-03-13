@@ -1,27 +1,5 @@
 @charset "utf-8";
-/*
-/*	Copyright (c) 2020 Marketify
-/*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
 
-01) kevisen BASE
-02) kevisen TOPBAR
-03) kevisen MOBILE MENU
-04) kevisen HERO
-05) kevisen ABOUT
-06) kevisen SERVICES
-07) kevisen PORTFOLIO
-08) kevisen PARTNERS
-09) kevisen TESTIMONIALS
-10) kevisen NEWS
-11) kevisen CONTACT
-12) kevisen COPYRIGHT
-13) kevisen CURSOR
-14) kevisen MEDIA QUERIES (FOR SMALL DEVICES)
-
-/*---------------------------------------------------*/
-/*	01) kevisen BASE
-/*---------------------------------------------------*/
 
 html {
 	overflow-x: hidden;
@@ -198,6 +176,43 @@ img.svg{
 	display: inline-block;
 }
 
+@font-face {
+	font-family: Oddval Variable;
+	src: url("https://garet.typeforward.com/assets/fonts/campaigns/OddvalVariable-VariableVF.woff2")
+  }
+.text-line {
+	font-variation-settings: "wght" 100, "ital" 0;
+	font-family: Oddval Variable;
+	font-size: clamp(3rem, -1.05rem + 7.2vw, 7rem);
+	line-height: 80%;
+	color: #000000;
+	white-space: nowrap;
+  
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-name: change;
+	transition-timing-function: ease;
+  
+	@for $line from 1 through 10 {
+	  &:nth-child(#{$line}) {
+		animation-delay: #{$line * 0.3s};
+	  }
+	}
+  }
+  
+  @keyframes change {
+	0% {
+	  font-variation-settings: "wght" 100, "ital" 0;
+	}
+  
+	50% {
+	  font-variation-settings: "wght" 900, "ital" 0;
+	}
+  
+	100% {
+	  font-variation-settings: "wght" 100, "ital" 0;
+	}
+  }
 .kevisen_tm_topbar .menu .links ul li a .first{
 	position: absolute;
 	transform: translateY(100%);
@@ -458,7 +473,9 @@ img.svg{
 }
 .kevisen_tm_hero .background .myOverlay.dark{background-color: #000;}
 .kevisen_tm_hero .background .myOverlay.loaded{left: 100%;}
-.kevisen_tm_hero .content .container{height: 100%;}
+.kevisen_tm_hero .content .container{height: 100%;     display: flex;
+    justify-content: center;     align-items: center;
+}
 .kevisen_tm_hero .content{
 	width: 100%;
 	height: 100%;
@@ -530,15 +547,19 @@ img.svg{
 }
 .kevisen_tm_down .line_wrapper:before{
 	content: "";
-	background-color: #000;
+	background-color: #ffffff;
 	width: 1px;
     height: 50%;
     display: block;
-    top: 0;
-	
+    top: -50px;
     -webkit-animation: scroll-down 2s ease-in-out infinite;
     -ms-animation: scroll-down 2s ease-in-out infinite;
-    animation: scroll-down 2s ease-in-out infinite;;
+    animation: scroll-down 2s ease-in-out infinite;
+	position: relative;
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 3rem;
+
 }
 
 ul.info-list,
@@ -784,9 +805,13 @@ ul.info-list li .d_title {
 }
 
 .background {
-	background-image: url(https://source.unsplash.com/1600x900/?day);
+	background: darkslategray;
+	/* background-image: url(https://source.unsplash.com/1600x900/?night);
+	mask-image: linear-gradient(var(--direction), rgba(0,0,0,1) 40%, rgba(0,0,0,0) 60%);
+	mask-position: 50% 50%; */
   }
   
+
   .foreground {
 	background-image: url(https://source.unsplash.com/1600x900/?night);
 	mask-image: linear-gradient(var(--direction), rgba(0,0,0,1) 40%, rgba(0,0,0,0) 60%);
@@ -798,7 +823,7 @@ ul.info-list li .d_title {
 .content_inner {
     backdrop-filter: blur(13px);
     padding: 1em;
-    background: #ffffff30;
+    /* background: #ffffff30; */
 }
 .kevisen_tm_portoflio .portfolio_filter{
 	width: auto;
