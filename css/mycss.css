@@ -255,6 +255,18 @@ img.svg{
 /*	03) kevisen MOBILE MENU
 /*---------------------------------------------------*/
 
+.content_inner {
+	p {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: clamp(2rem, -1.05rem + 7.2vw, 3rem);
+    line-height: 75%;
+    color: white;
+    font-family: serif;
+    font-weight: 400;
+	}
+}
+
 
 
 .form-control {
