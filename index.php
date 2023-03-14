@@ -354,26 +354,56 @@
 				<div class="wrapper">
 					<div class="left wow fadeInLeft" data-wow-duration="0.8s">
 						<div class="fields">
-							<form action="/" method="post" class="contact_form" id="contact_form">
-								<div class="returnmessage"></div>
-								<div class="empty_notice"><span>Please Fill Required Fields</span></div>
-								<div class="first">
-								  <ul>
-									<li>
-									  <input id="name" name="name" type="text" placeholder="Name" required>
-									</li>
-									<li>
-									  <input id="email" name="email" type="email" placeholder="Email" required>
-									</li>
-								  </ul>
-								</div>
-								<div class="last">
-								  <textarea id="message" name="message" placeholder="Message" required></textarea>
-								</div>
-								<div class="kevisen_tm_button" data-position="left">
-								  <button type="submit" id="send_message" class="submit_btn"><span>Send Message</span></button>
-								</div>
-							  </form>
+							<?php include "send-email.php"; ?>
+<form id="contact-form" method="post" action="send-email.php">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="inputGroup">
+                          <input type="text" autocomplete="off" name="name" required>
+                          <label for="name">Name</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="inputGroup">
+                          <input type="email" autocomplete="off" name="email" required>
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="inputGroup">
+                          <input type="tel" autocomplete="off" name="telephone" required>
+                          <label for="telephone">Telephone</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="inputGroup">
+                          <input type="text" autocomplete="off" name="subject" required>
+                          <label for="subject">Subject</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="inputGroup">
+                          <textarea name="message" required></textarea>
+                          <label for="message">Message</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary cursor-scale small" type="submit">Send</button>
+                  </form> <?php
+if (isset($_GET["status"])) {
+  if ($_GET["status"] == "success") {
+    echo '
+                                                                  <p id="success-message">Your message has been sent successfully!</p>';
+  } else {
+    echo '
+                                                                  <p id="error-message">Failed to send the message. Please try again later.</p>';
+  }
+}
+?>
 						</div>
 					</div>
 					<!-- <div class="right wow fadeInRight large-up" data-wow-duration="0.8s">
