@@ -354,26 +354,22 @@
 				<div class="wrapper">
 					<div class="left wow fadeInLeft" data-wow-duration="0.8s">
 						<div class="fields">
-							<form action="/" method="post" class="contact_form" id="contact_form">
-								<div class="returnmessage"></div>
-								<div class="empty_notice"><span>Please Fill Required Fields</span></div>
-								<div class="first">
-								  <ul>
-									<li>
-									  <input id="name" name="name" type="text" placeholder="Name" required>
-									</li>
-									<li>
-									  <input id="email" name="email" type="email" placeholder="Email" required>
-									</li>
-								  </ul>
-								</div>
-								<div class="last">
-								  <textarea id="message" name="message" placeholder="Message" required></textarea>
-								</div>
-								<div class="kevisen_tm_button" data-position="left">
-								  <button type="submit" id="send_message" class="submit_btn"><span>Send Message</span></button>
-								</div>
-							  </form>
+							<!-- modify this form HTML and place wherever you want your form -->
+<form
+action="https://formspree.io/f/mayzbljb"
+method="POST"
+enctype="multipart/form-data"
+>
+<label>
+  Your email:
+  <input type="email" name="email">
+</label>
+<label>
+  Your file:
+  <input type="file" name="upload">
+</label>
+<button type="submit">Send</button>
+</form>
 						</div>
 					</div>
 					<!-- <div class="right wow fadeInRight large-up" data-wow-duration="0.8s">
