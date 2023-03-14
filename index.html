@@ -339,7 +339,8 @@
 	</div>
 	<!-- /PORTFOLIO -->
 	
-	<!-- CONTACT -->
+	
+	<!-- CONTACT test-->
 	<div class="kevisen_tm_contact" id="contact">
 		<div class="bg_image"></div>
 		<div class="container">
@@ -354,61 +355,34 @@
 				<div class="wrapper">
 					<div class="left wow fadeInLeft" data-wow-duration="0.8s">
 						<div class="fields">
-							<?php include "send-email.php"; ?>
-<form id="contact-form" method="post" action="send-email.php">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="inputGroup">
-                          <input type="text" autocomplete="off" name="name" required>
-                          <label for="name">Name</label>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="inputGroup">
-                          <input type="email" autocomplete="off" name="email" required>
-                          <label for="email">Email</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="inputGroup">
-                          <input type="tel" autocomplete="off" name="telephone" required>
-                          <label for="telephone">Telephone</label>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="inputGroup">
-                          <input type="text" autocomplete="off" name="subject" required>
-                          <label for="subject">Subject</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="inputGroup">
-                          <textarea name="message" required></textarea>
-                          <label for="message">Message</label>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="btn btn-primary cursor-scale small" type="submit">Send</button>
-                  </form> <?php
-if (isset($_GET["status"])) {
-  if ($_GET["status"] == "success") {
-    echo '
-                                                                  <p id="success-message">Your message has been sent successfully!</p>';
-  } else {
-    echo '
-                                                                  <p id="error-message">Failed to send the message. Please try again later.</p>';
-  }
-}
-?>
+							<form id="ajax-contact" role="form" action="https://formspree.io/f/mayzbljb" method="POST" data-toggle="validator">
+								<div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
+								  <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
+								  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+								  <div class="help-block with-errors"></div>
+								</div>
+					
+								<div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+								  <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL" data-error="Field can't be blank!" required>
+								  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+								  <div class="help-block with-errors"></div>
+								</div>
+					
+								<div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+								  <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
+								  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+								  <div class="help-block with-errors"></div>
+								</div>
+					
+								<div class="wow fadeInUp" data-wow-delay="1s">
+								  <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
+								</div>
+							  </form>
 						</div>
 					</div>
-					<!-- <div class="right wow fadeInRight large-up" data-wow-duration="0.8s">
+					<div class="right wow fadeInRight" data-wow-duration="0.8s">
 						<img src="img/contact/Get in touch-cuate.png">
-					</div>	 -->
+					</div>	
 				</div>
 			</div>
 		</div>
