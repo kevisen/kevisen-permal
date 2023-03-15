@@ -1,4 +1,7 @@
+<?php include "send-email.php"; ?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -354,7 +357,7 @@
 				<div class="wrapper">
 					<div class="left wow fadeInLeft" data-wow-duration="0.8s">
 						<div class="fields">
-							<form id="ajax-contact" role="form" action="https://formspree.io/f/mayzbljb" method="POST" data-toggle="validator">
+							<form id="ajax-contact" role="form" action="send-email.php" method="POST" data-toggle="validator">
 								<div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
 								  <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
 								  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -377,6 +380,20 @@
 								  <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
 								</div>
 							  </form>
+							  <?php
+
+
+if (isset($_GET["status"])) {
+  if ($_GET["status"] == "success") {
+    echo '
+																																	<p id="success-message">Your message has been sent successfully!</p>';
+  } else {
+    echo '
+																																	<p id="error-message">Failed to send the message. Please try again later.</p>';
+  }
+}
+ 
+?>
 						</div>
 					</div>
 					<div class="right wow fadeInRight" data-wow-duration="0.8s">
