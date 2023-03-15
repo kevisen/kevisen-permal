@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Set the recipient email address here
-    $to = "ybyvanbazire@gmail.com";
+    $to = "pkevisen@gmail.com";
   
     // Collect the form data
     $name = trim($_POST["name"]);
